@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+html { 
+height: 100%;
+font-family: 'Open Sans', sans-serif;
+background-color: rgb(43, 43, 43)
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: rgb(59, 59, 59);
+  padding: 20px;
+  margin: 20px;
+  font: 14px;
+  color: #ddd;;
+  width: 40%;
+}
+/*CHECKBOX*/
+
+input[type="checkbox"] { 
+  display: none; 
+  position: absolute;
+}
+
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  user-select: none;
+
+}
+
+ input[type="checkbox"] + label:last-child,  input[type="radio"] + label:last-child  {
+   margin-bottom: 0px; 
+  } 
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #ff194b;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: .6;
+  transition: all .2s;
+}
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 2.1px;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(45deg);
+}
+
+/*RADIO*/
+
+input[type="radio"] {
+  display: none;
+  position: absolute;
+}
+
+input[type="radio"] + label {
+position: relative;
+display: block;
+padding-left: 35px;
+margin-bottom: 30px;
+font: 14px;
+cursor: pointer;
+user-select: none;
+}
+
+input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+
+}
+
+input[type="radio"] + label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid teal;
+  border-radius: 50%;
+  transition: all 1s ;
+}
+
+input[type="radio"] + label::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid teal;
+  border-radius: 50%;
+
+}
+
+
+input[type="radio"]:checked + label:before  {
+  background-color:  rgb(16, 206, 206);
+  transform: scale(0.4);
+  transition: all .6s;
+  border-color: rgb(16, 206, 206);
+}
+
+input[type="radio"]:hover + label:after  {
+  border: 1.5px solid rgb(16, 206, 206);
+  transition: all 1s ;
+}
+
+/*BUTTON*/
+
+.button {
+  position: relative;
+  width: 40%;
+  height: 100px;
+}
+.btn {
+  width: 160px;
+  height: 50px;
+  background-color: rgb(135, 71, 255);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+}
+.btn:after, .btn:before {
+  content: 'Submit';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: all .5s;
+  transform: translate(-50%, -50%);
+}
+.btn:hover:after {
+  top: -50%;
+}
+.btn:before {
+  content: "\f0e0";
+  font-family: FontAwesome;
+  font-size: 30px;
+  top: 190%;
+}
+.btn:hover:before {
+  top: 50%;
+}
+
+
+
